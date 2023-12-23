@@ -3,7 +3,7 @@ import React from "react";
 const landing = () => {
   return (
     <>
-      <h1>landing</h1>
+      <button>Let's get Started!</button>
     </>
   );
 };
