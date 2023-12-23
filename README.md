@@ -8,6 +8,7 @@ What is your app?
 
 Sometimes we end in a situation where we're with friends and have some time to use/spend,
 but you don't have an idea on which game to play or you want to try something new
+
 Enter R0ll 4 Games, your board games selector/randomizer!
 
 ### Problem
