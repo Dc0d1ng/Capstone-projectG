@@ -10,8 +10,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/add-fav" />
-          <Route path="/remove-fav" />
+          <Route path="/choose" />
+          <Route path="/choose/selections" />
+          <Route path="/user/add-fav" />
+          <Route path="/user/remove-fav" />
         </Routes>
       </BrowserRouter>
     </>

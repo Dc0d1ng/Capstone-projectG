@@ -10,13 +10,12 @@ const Header = () => {
         <Link to="/">
           <img src={Logo} />
         </Link>
-        <h1 className="header__h1">ROLL 4 GAMES</h1>
-        <p className="header__subtitle">Board Game Selector</p>
+        <h1 className="header__h1">Board Game Selector</h1>
         <ul>
           <Link to="/signup">
             <li>Sign Up</li>
           </Link>
-          <Link to="/login">
+          <Link to="/user">
             <li>Login</li>
           </Link>
         </ul>

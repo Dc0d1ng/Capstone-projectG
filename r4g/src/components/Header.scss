@@ -1,8 +1,36 @@
 * {
   text-align: center;
   list-style-type: none;
+  text-decoration: none;
 }
 
 img {
   width: 20rem;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: greenyellow;
+  border-radius: 16px;
+  font-weight: 900;
+}
+
+ul {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+li {
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  background-color: orange;
+  border-radius: 20px;
+  width: fit-content;
+  margin-bottom: 1rem;
+  outline: 2px solid seagreen;
+  font-weight: 700;
+  color: black;
 }

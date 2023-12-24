@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const landing = () => {
   return (
     <>
-      <button>Let's get Started!</button>
+      <Link to="/choose">
+        <button>Let's get Started!</button>
+      </Link>
     </>
   );
 };
