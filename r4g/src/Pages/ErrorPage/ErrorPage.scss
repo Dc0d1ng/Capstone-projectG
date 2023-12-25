@@ -4,13 +4,12 @@
   padding: 12rem 0;
   gap: 2rem;
   align-items: center;
+  background-image: url("../../assets/11.jpg");
+  background-size: cover;
 
   &__header {
     text-align: center;
-  }
-
-  &__meowsage {
-    margin-left: 10rem;
+    color: white;
   }
 
   &__button {
