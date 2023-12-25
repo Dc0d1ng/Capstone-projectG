@@ -14,7 +14,10 @@ function App() {
           <Route path="/choose/selected" />
           <Route path="/user/add-fav" />
           <Route path="/user/remove-fav" />
-          <Route path="*" element={<ErrorPage />} />
+          <Route
+            path="*"
+            // element={<ErrorPage />}
+          />
         </Routes>
       </BrowserRouter>
     </>
