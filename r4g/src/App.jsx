@@ -1,7 +1,8 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./pages/landing";
+import Landing from "./Pages/Landing/Landing";
 import Header from "./components/Header";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
   return (
@@ -14,10 +15,7 @@ function App() {
           <Route path="/choose/selected" />
           <Route path="/user/add-fav" />
           <Route path="/user/remove-fav" />
-          <Route
-            path="*"
-            // element={<ErrorPage />}
-          />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </>

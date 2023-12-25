@@ -1,6 +1,6 @@
 import React from "react";
 import "./landing.scss";
-import Logo from "../assets/r4g.png";
+import Logo from "../../assets/r4g.png";
 import { Link } from "react-router-dom";
 
 const landing = () => {
