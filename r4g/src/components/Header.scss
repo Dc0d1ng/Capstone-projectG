@@ -17,7 +17,7 @@ button {
 }
 
 ul {
-  margin-top: 1rem;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -30,7 +30,7 @@ li {
   border-radius: 20px;
   width: fit-content;
   margin-bottom: 1rem;
-  outline: 2px solid seagreen;
+  outline: 11px solid seagreen;
   font-weight: 700;
   color: black;
 }
