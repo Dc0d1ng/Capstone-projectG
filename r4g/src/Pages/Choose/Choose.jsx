@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+
 import "./Choose.scss";
 
 const Choose = () => {
+  const [players, setPlayers] = useState("2");
+  // const []
+
   return (
     <>
       {/* CHOOSE PLAYERS */}
@@ -10,37 +14,37 @@ const Choose = () => {
         <div className="radio-flexbox">
           <label class="container">
             2
-            <input type="radio" checked="checked" name="radio" />
+            <input type="radio" checked="checked" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             3
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             4
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             5
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             6
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             7
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             8
-            <input type="radio" name="radio" />
+            <input type="radio" name="players" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -49,27 +53,27 @@ const Choose = () => {
         <div className="radio-flexbox">
           <label class="container">
             Strategy
-            <input type="radio" checked="checked" name="radio" />
+            <input type="radio" checked="checked" name="type" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Cooperative
-            <input type="radio" name="radio" />
+            <input type="radio" name="type" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Family Friendly
-            <input type="radio" name="radio" />
+            <input type="radio" name="type" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Competitive
-            <input type="radio" name="radio" />
+            <input type="radio" name="type" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Euro
-            <input type="radio" name="radio" />
+            <input type="radio" name="type" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -78,17 +82,17 @@ const Choose = () => {
         <div className="radio-flexbox">
           <label class="container">
             Beginner
-            <input type="radio" checked="checked" name="radio" />
+            <input type="radio" checked="checked" name="difficulty" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Intermediate
-            <input type="radio" name="radio" />
+            <input type="radio" name="difficulty" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             Advanced
-            <input type="radio" name="radio" />
+            <input type="radio" name="difficulty" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -97,22 +101,22 @@ const Choose = () => {
         <div className="radio-flexbox">
           <label class="container">
             15-30 mins
-            <input type="radio" checked="checked" name="radio" />
+            <input type="radio" checked="checked" name="length" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             1/2-1 hr
-            <input type="radio" name="radio" />
+            <input type="radio" name="length" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             1-2 hrs
-            <input type="radio" name="radio" />
+            <input type="radio" name="length" />
             <span class="checkmark"></span>
           </label>
           <label class="container">
             2-4 hrs
-            <input type="radio" name="radio" />
+            <input type="radio" name="length" />
             <span class="checkmark"></span>
           </label>
         </div>
