@@ -1,6 +1,15 @@
+h2 {
+  font-size: 20px;
+}
+
+.choose-section {
+  margin-top: 3rem;
+}
+
 .radio-flexbox {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 2rem 4rem;
   flex-wrap: wrap;
 }
@@ -8,13 +17,17 @@
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 15px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+}
+
+.container-flex {
+  justify-content: space-around;
 }
 
 /* Hides the browser default radio button */
