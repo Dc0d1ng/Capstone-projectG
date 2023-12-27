@@ -1,0 +1,12 @@
+.cards {
+  padding: 20px;
+
+  &__content {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 7px;
+    max-width: 250px;
+  }
+}
