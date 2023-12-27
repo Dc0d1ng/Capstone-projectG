@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-
 import "./Choose.scss";
+import Logo from "../../assets/r4g.jpeg";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Choose = () => {
   const [players, setPlayers] = useState("2");
@@ -12,6 +13,9 @@ const Choose = () => {
     <>
       {/* CHOOSE PLAYERS */}
       <section className="choose-section">
+        <Link to="/">
+          <img className="header__logo" src={Logo} />
+        </Link>
         <h2>Choose Number of Players</h2>
         <form>
           <div className="radio-flexbox">
