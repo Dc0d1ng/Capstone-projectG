@@ -1,6 +1,6 @@
 import React from "react";
 import "./ErrorPage.scss";
-// import Ohnoes from "../../assets/12.png";
+import Ohnoes from "../../assets/12.png";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
