@@ -143,6 +143,7 @@ const Choose = () => {
               <span className="checkmark"></span>
             </label>
           </div>
+          <button className="choices-submit">Time to Roll!</button>
         </form>
       </section>
     </>

@@ -8,7 +8,7 @@ const landing = () => {
     <>
       <section className="header">
         <Link to="/">
-          <img src={Logo} />
+          <img className="header__logo" src={Logo} />
         </Link>
         <h1 className="header__h1">Board Game Selector</h1>
         <ul>
