@@ -1,5 +1,9 @@
 .cards {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 
   &__content {
     margin: 20px;
@@ -8,5 +12,22 @@
     border: 2px solid black;
     border-radius: 7px;
     max-width: 250px;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  &__header {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #6f2ed8;
+    margin: 12px 0 7px 0;
+    font-size: 1rem;
   }
 }
