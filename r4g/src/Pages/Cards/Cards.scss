@@ -12,6 +12,10 @@
     border: 2px solid black;
     border-radius: 7px;
     max-width: 250px;
+
+    &--selected {
+      outline: 20px outset yellow;
+    }
   }
 
   &__img {
