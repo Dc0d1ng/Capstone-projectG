@@ -1,15 +1,15 @@
 # Project Title
 
-R0ll 4 Games
+Roll 4 Games
 
 ## Overview
 
 What is your app?
 
-Sometimes we end in a situation where we're with friends and have some time to use/spend,
+Sometimes we end in a situation where we're with friends and have spare time to spend,
 but you don't have an idea on which game to play or you want to try something new
 
-Enter R0ll 4 Games, your board games selector/randomizer!
+Enter Roll 4 Games, your board games selector/randomizer!
 
 ### Problem
 
@@ -27,6 +27,7 @@ Anyone who wants to play board games with others
 How will they use it?
 
 Simple, intuitive and clean UI will help people get started quickly
+User login will save favourites to pull data from
 
 ### Features
 
@@ -34,11 +35,17 @@ List the functionality that your app will include. These can be written as user 
 
 Recommend me a game using these selections
 (radio selector?)
+
 Number of players 2-8 max
-time 5-10mins, 15-30, 30-1hr, 2hrs etc (might reduce the options)
-Will populate a list of 5 games (with a summary/details under each card)
+time 5-10mins, 15-30, 30-1hr, 2hrs etc (reduce the options)
 Beginner, intermediate, advanced
 (Complexity of game)
+Choose Type of Game
+(family-friendly, coop, competitive, etc.)
+Will populate a list of 5 games (with a summary/details for each card)
+
+
+
 submit button that randomly selects based on preferences
 Adding a favourites icon/button
 Database with user and favourites (add, delete favourites)
