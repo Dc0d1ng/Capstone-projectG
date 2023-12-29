@@ -10,6 +10,14 @@ const Landing = () => {
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
 
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
