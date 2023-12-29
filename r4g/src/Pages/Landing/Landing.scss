@@ -44,6 +44,11 @@
     width: 100%;
   }
 
+  &__button-toggle {
+    background-color: green;
+    padding: 0.25rem 2.5rem;
+  }
+
   &__or {
     font-size: 1rem;
     font-weight: 600;
