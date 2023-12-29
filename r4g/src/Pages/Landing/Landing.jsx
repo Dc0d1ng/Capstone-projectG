@@ -11,18 +11,21 @@ const landing = () => {
           <img className="landing__logo" src={Logo} />
         </Link>
         <h1 className="landing__h1">Board Game Selector</h1>
-        <ul>
-          <Link to="/signup">
-            <li>
-              <button className="landing__button">Sign Up</button>
-            </li>
-          </Link>
+        <form className="landing__form">
+          <input id="name" type="text" placeholder="Username"></input>
+          <input id="password" type="password" placeholder="Password"></input>
           <Link to="/user">
-            <li>
-              <button className="landing__button">Login</button>
-            </li>
+            <button className="landing__button landing__button-login">
+              Login
+            </button>
           </Link>
-        </ul>
+          {/* <Link to="/signup"> */}
+          <button className="landing__button">Sign Up</button>
+          {/* </Link> */}
+        </form>
+        {/* <p className="landing__p-break">
+          -------------------O R---------------------
+        </p> */}
         <Link className="start-link" to="/choose">
           Let's Get Started!
         </Link>
