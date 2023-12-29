@@ -23,9 +23,9 @@ const landing = () => {
           <button className="landing__button">Sign Up</button>
           {/* </Link> */}
         </form>
-        {/* <p className="landing__p-break">
-          -------------------O R---------------------
-        </p> */}
+        <div className="landing__divider"></div>
+        <p className="landing__or">OR</p>
+        <div className="landing__divider"></div>
         <Link className="start-link" to="/choose">
           Let's Begin!
         </Link>

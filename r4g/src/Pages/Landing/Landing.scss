@@ -44,13 +44,14 @@
     width: 100%;
   }
 
-  &__p-break {
-    font-size: 1rem;
+  &__divider {
+    border: 1px solid black;
   }
 }
 
 .start-link {
   display: inline-block;
+  margin-top: 2rem;
   font-size: 1.125rem;
   font-weight: 600;
   outline: 1px solid black;
