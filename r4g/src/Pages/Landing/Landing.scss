@@ -44,14 +44,28 @@
     width: 100%;
   }
 
-  &__divider {
+  &__or {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+
+  &__divider-top,
+  &__divider-bottom {
     border: 1px solid black;
+  }
+
+  &__divider-top {
+    margin: 3rem 2rem 0 2rem;
+  }
+
+  &__divider-bottom {
+    margin: 0 2rem 3rem 2rem;
   }
 }
 
 .start-link {
   display: inline-block;
-  margin-top: 2rem;
   font-size: 1.125rem;
   font-weight: 600;
   outline: 1px solid black;

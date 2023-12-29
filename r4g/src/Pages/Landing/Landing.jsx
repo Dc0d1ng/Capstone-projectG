@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./landing.scss";
 import Logo from "../../assets/r4g.jpeg";
 import { Link } from "react-router-dom";
 
 const landing = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [isLogin, setIsLogin] = useState("");
+
   return (
     <>
       <section className="landing">
@@ -23,9 +27,9 @@ const landing = () => {
           <button className="landing__button">Sign Up</button>
           {/* </Link> */}
         </form>
-        <div className="landing__divider"></div>
+        <div className="landing__divider-top"></div>
         <p className="landing__or">OR</p>
-        <div className="landing__divider"></div>
+        <div className="landing__divider-bottom"></div>
         <Link className="start-link" to="/choose">
           Let's Begin!
         </Link>
