@@ -27,7 +27,7 @@ const landing = () => {
           -------------------O R---------------------
         </p> */}
         <Link className="start-link" to="/choose">
-          Let's Get Started!
+          Let's Begin!
         </Link>
       </section>
     </>

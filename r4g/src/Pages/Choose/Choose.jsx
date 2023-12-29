@@ -122,7 +122,7 @@ const Choose = () => {
           <h2>Choose Game Length</h2>
           <div className="radio-flexbox">
             <label className="container">
-              15-30 mins
+              15 to 30 mins
               <input
                 type="radio"
                 name="length"
@@ -132,17 +132,17 @@ const Choose = () => {
               <span className="checkmark"></span>
             </label>
             <label className="container">
-              1/2-1 hr
+              1/2 to 1 hr
               <input type="radio" name="length" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
-              1-2 hrs
+              1 to 2 hrs
               <input type="radio" name="length" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
-              2-4 hrs
+              2 to 4 hrs
               <input type="radio" name="length" />
               <span className="checkmark"></span>
             </label>
