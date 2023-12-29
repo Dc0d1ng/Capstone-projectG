@@ -9,6 +9,8 @@ const Landing = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
+  const [usernameError, setUsernameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -30,6 +32,14 @@ const Landing = () => {
     }
   };
 
+  const handleLogin = () => {
+    console.log("Logging in with: ", username, password);
+  };
+
+  const handleSignup = () => {
+    console.log("Signing up with: ", username, password);
+  };
+
   return (
     <>
       <section className="landing">
@@ -43,14 +53,14 @@ const Landing = () => {
             id="name"
             type="text"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={handleUsernameChange}
             placeholder="Username"
           />
           <input
             id="password"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handlePasswordChange}
             placeholder="Password"
           />
           <button type="submit" className="landing__button">
