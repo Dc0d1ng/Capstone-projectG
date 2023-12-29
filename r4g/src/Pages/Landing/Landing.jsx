@@ -6,17 +6,21 @@ import { Link } from "react-router-dom";
 const landing = () => {
   return (
     <>
-      <section className="header">
+      <section className="landing">
         <Link to="/">
-          <img className="header__logo" src={Logo} />
+          <img className="landing__logo" src={Logo} />
         </Link>
-        <h1 className="header__h1">Board Game Selector</h1>
+        <h1 className="landing__h1">Board Game Selector</h1>
         <ul>
           <Link to="/signup">
-            <li>Sign Up</li>
+            <li>
+              <button className="landing__button">Sign Up</button>
+            </li>
           </Link>
           <Link to="/user">
-            <li>Login</li>
+            <li>
+              <button className="landing__button">Login</button>
+            </li>
           </Link>
         </ul>
         <Link className="start-link" to="/choose">
