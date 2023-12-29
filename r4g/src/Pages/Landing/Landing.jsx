@@ -9,35 +9,35 @@ const Landing = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
-  const [usernameError, setUsernameError] = useState("");
-  const [passwordError, setPasswordError] = useState("");
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
+    setUsernameError("");
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+    setPasswordError("");
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
     if (isLogin) {
-      // Implement login logic here
-      console.log("Logging in with:", username, password);
+      // login logic here
+      alert("Logging in with:", username, password);
     } else {
-      // Implement signup logic here
-      console.log("Signing up with:", username, password);
+      // signup logic here
+      alert("Signing up with:", username, password);
     }
   };
 
   const handleLogin = () => {
-    console.log("Logging in with: ", username, password);
+    alert("Logging in with: ", username, password);
   };
 
   const handleSignup = () => {
-    console.log("Signing up with: ", username, password);
+    alert("Signing up with: ", username, password);
   };
 
   return (
@@ -49,19 +49,25 @@ const Landing = () => {
         <h1 className="landing__h1">Board Game Selector</h1>
 
         <form className="landing__form" onSubmit={handleFormSubmit}>
+          <label>Username:</label>
           <input
             id="name"
             type="text"
             value={username}
             onChange={handleUsernameChange}
-            placeholder="Username"
+            placeholder="Enter Username"
+            minLength={6}
+            required
           />
+          <label>Password</label>
           <input
             id="password"
             type="password"
             value={password}
             onChange={handlePasswordChange}
-            placeholder="Password"
+            placeholder="Enter Password"
+            minLength={6}
+            required
           />
           <button type="submit" className="landing__button">
             {isLogin ? "Login" : "Sign Up"}
