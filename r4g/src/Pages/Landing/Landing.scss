@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.25rem;
     margin: 1rem 0;
     width: 100%;
   }
@@ -29,9 +29,10 @@
   }
 
   &__button {
+    margin-top: 1rem;
     padding: 0.25rem 5.15rem;
     font-size: 1.25rem;
-    background-color: greenyellow;
+    background-color: rgb(47, 89, 255);
     color: white;
     border-radius: 1rem;
     font-weight: 900;
@@ -47,6 +48,12 @@
   &__button-toggle {
     background-color: green;
     padding: 0.25rem 2.5rem;
+    margin: 0;
+  }
+
+  &__label-username,
+  &__label-password {
+    margin-right: 10rem;
   }
 
   &__or {

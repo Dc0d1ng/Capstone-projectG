@@ -49,7 +49,7 @@ const Landing = () => {
         <h1 className="landing__h1">Board Game Selector</h1>
 
         <form className="landing__form" onSubmit={handleFormSubmit}>
-          <label>Username:</label>
+          <label className="landing__label-username">Username:</label>
           <input
             id="name"
             type="text"
@@ -59,7 +59,7 @@ const Landing = () => {
             minLength={6}
             required
           />
-          <label>Password</label>
+          <label className="landing__label-password">Password</label>
           <input
             id="password"
             type="password"
