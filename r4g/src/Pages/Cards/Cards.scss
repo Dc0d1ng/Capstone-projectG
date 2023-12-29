@@ -18,6 +18,15 @@
     }
   }
 
+  &__reroll-button {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    background-color: greenyellow;
+    border-radius: 16px;
+    font-weight: 900;
+  }
+
   &__img {
     max-width: 100%;
     border-radius: 4px;
@@ -33,5 +42,14 @@
     color: #6f2ed8;
     margin: 12px 0 7px 0;
     font-size: 1rem;
+  }
+
+  &__reroll-button {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    background-color: greenyellow;
+    border-radius: 16px;
+    font-weight: 900;
   }
 }
