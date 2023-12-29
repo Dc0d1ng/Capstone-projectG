@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.scss";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   return (
@@ -56,7 +57,10 @@ const Cards = () => {
           Read More
         </a>
       </div>
-      <button className="cards__reroll-button">One More Time!</button>
+      <button className="cards__button">One More Time!</button>
+      <Link to="/">
+        <button className="cards__button-home">Country Roooads</button>
+      </Link>
     </section>
   );
 };

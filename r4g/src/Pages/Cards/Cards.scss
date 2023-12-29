@@ -18,13 +18,18 @@
     }
   }
 
-  &__reroll-button {
-    padding: 1rem 2rem;
+  &__button,
+  &__button-home {
+    padding: 1rem;
     margin-bottom: 2rem;
     font-size: 1.25rem;
     background-color: greenyellow;
     border-radius: 16px;
     font-weight: 900;
+  }
+
+  &__button-home {
+    background-color: dodgerblue;
   }
 
   &__img {

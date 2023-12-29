@@ -11,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/join" />
           <Route path="/choose" element={<Choose />} />
           <Route path="/choose/selected" element={<Cards />} />
           <Route path="/user/add-fav" />
