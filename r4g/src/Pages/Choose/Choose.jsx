@@ -147,7 +147,9 @@ const Choose = () => {
               <span className="checkmark"></span>
             </label>
           </div>
-          <button className="choices-submit">Time to Roll!</button>
+          <Link to="/choose/selected">
+            <button className="choices-submit">Time to Roll!</button>
+          </Link>
         </form>
       </section>
     </>

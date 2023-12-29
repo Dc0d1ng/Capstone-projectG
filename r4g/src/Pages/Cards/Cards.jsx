@@ -56,7 +56,7 @@ const Cards = () => {
           Read More
         </a>
       </div>
-      <button className="cards_reroll-button">One More Time!</button>
+      <button className="cards__reroll-button">One More Time!</button>
     </section>
   );
 };
