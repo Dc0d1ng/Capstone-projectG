@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setisLogin] = useState(false);
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -75,7 +75,7 @@ const Landing = () => {
         </form>
         <button
           className="landing__button landing__button-toggle"
-          onClick={() => setIsLogin(!isLogin)}
+          onClick={() => setisLogin(!isLogin)}
         >
           {isLogin ? "Switch to Sign Up" : "Switch to Login"}
         </button>
