@@ -5,11 +5,19 @@
   align-items: center;
   justify-content: space-evenly;
 
-  &__fav-icon {
+  &__fav-outline,
+  &__fav-filled {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     font-size: 35px;
+  }
+
+  &__fav-outline {
+    color: black;
+  }
+
+  &__fav-filled {
     color: red;
   }
 
