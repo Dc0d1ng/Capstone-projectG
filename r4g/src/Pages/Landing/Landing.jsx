@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./landing.scss";
 import Logo from "../../assets/r4g.jpeg";
-import { Link } from "react-router-dom";
 
 const Landing = () => {
   const [error, setError] = useState(null);
@@ -9,6 +9,8 @@ const Landing = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setisLogin] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -35,6 +37,8 @@ const Landing = () => {
             password,
           });
           console.log("Logged in!", response.data);
+          localStorage.setItem("token", response.data.token);
+          navigate.push("/choose");
         } catch (error) {
           console.log("Login failed...", error.response.data.message);
         }
