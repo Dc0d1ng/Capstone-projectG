@@ -1,11 +1,11 @@
-// landing.jsx
-
 import React, { useState } from "react";
 import "./landing.scss";
 import Logo from "../../assets/r4g.jpeg";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLogin, setisLogin] = useState(false);
@@ -20,24 +20,48 @@ const Landing = () => {
     setPasswordError("");
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (isLogin) {
-      // login logic here
-      alert("Logging in with:", username, password);
-    } else {
-      // signup logic here
-      alert("Signing up with:", username, password);
+    setLoading(true);
+    setError(null);
+
+    try {
+      if (isLogin) {
+        // login logic here
+        try {
+          const response = await axios.post("/user/login", {
+            username,
+            password,
+          });
+          console.log("Logged in!", response.data);
+        } catch (error) {
+          console.log("Login failed...", error.response.data.message);
+        }
+      } else {
+        try {
+          const response = await axios.post("/user/signup", {
+            username,
+            password,
+          });
+          console.log("You're signed up!", response.data);
+        } catch (error) {
+          console.error("Signup failed...", error.response.data.message);
+        }
+      }
+    } catch (error) {
+      console.error(
+        "Authentication error",
+        error.response?.data?.message || "There is an error"
+      );
+      setError(error.response?.data?.message || "An error occured");
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleLogin = () => {
-    alert("Logging in with: ", username, password);
-  };
-
-  const handleSignup = () => {
-    alert("Signing up with: ", username, password);
+  const toggleLoginMode = () => {
+    setisLogin(!isLogin);
   };
 
   return (
