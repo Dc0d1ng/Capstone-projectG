@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./landing.scss";
 import Logo from "../../assets/r4g.jpeg";
 
@@ -36,13 +37,14 @@ const Landing = () => {
             username,
             password,
           });
-          console.log("Logged in!", response.data);
+          console.log("You're logged in!", response.data);
           localStorage.setItem("token", response.data.token);
           navigate.push("/choose");
         } catch (error) {
           console.log("Login failed...", error.response.data.message);
         }
       } else {
+        //signup logic here
         try {
           const response = await axios.post("/user/signup", {
             username,
