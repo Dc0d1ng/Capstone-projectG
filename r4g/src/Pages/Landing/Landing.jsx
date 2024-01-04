@@ -37,7 +37,7 @@ const Landing = () => {
             username,
             password,
           });
-          console.log("You're logged in!", response.data);
+          console.log(`${username}, you're logged in!`, response.data);
           localStorage.setItem("token", response.data.token);
           navigate.push("/choose");
         } catch (error) {

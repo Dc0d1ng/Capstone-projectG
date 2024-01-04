@@ -29,6 +29,7 @@
     border-radius: 7px;
     max-width: 250px;
     position: relative;
+    padding-bottom: 1rem;
   }
 
   &__content--selected {
@@ -44,6 +45,10 @@
     background-color: greenyellow;
     border-radius: 16px;
     font-weight: 900;
+  }
+
+  &__button {
+    margin-top: 2rem;
   }
 
   &__button-home {

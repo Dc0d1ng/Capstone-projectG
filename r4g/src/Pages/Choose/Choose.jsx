@@ -1,13 +1,48 @@
 import "./Choose.scss";
 import Logo from "../../assets/r4g.jpeg";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Choose = () => {
+  const navigate = useNavigate();
   const [players, setPlayers] = useState("2");
   const [type, setType] = useState("Family-friendly");
   const [difficulty, setDifficulty] = useState("Beginner");
   const [length, setLength] = useState("15-30 mins");
+
+  const handleSelectionSubmit = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/selectedGames", {
+        // Update the URL with your server's address
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          players,
+          difficulty,
+          length,
+        }),
+      });
+
+      const data = await response.json();
+      console.log(data); // You can handle the response from the server here
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(
+      event.target.players.value,
+      event.target.difficulty.value,
+      event.target.length.value
+    );
+    navigate(
+      `/choose/selected/${event.target.players.value}&${event.target.difficulty.value}&${event.target.length.value}`
+    );
+  };
 
   return (
     <>
@@ -17,51 +52,46 @@ const Choose = () => {
           <img className="header__logo" src={Logo} />
         </Link>
         <h2>Choose Number of Players</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="radio-flexbox">
             <label className="container container-flex">
               2
-              <input
-                type="radio"
-                checked={players === "2"}
-                onChange={() => setPlayers("2")}
-                name="players"
-              />
+              <input type="radio" defaultChecked value="2" name="players" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               3
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="3" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               4
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="4" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               5
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="5" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               6
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="6" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               7
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="7" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               8
-              <input type="radio" name="players" />
+              <input type="radio" name="players" value="8" />
               <span className="checkmark"></span>
             </label>
           </div>
           {/* CHOOSE GAME TYPE*/}
-          <h2>Choose Type of Game</h2>
+          {/* <h2>Choose Type of Game</h2>
           <div className="radio-flexbox">
             <label className="container">
               Family Friendly
@@ -93,7 +123,7 @@ const Choose = () => {
               <input type="radio" name="type" />
               <span className="checkmark"></span>
             </label>
-          </div>
+          </div> */}
           {/* CHOOSE DIFFICULTY*/}
           <h2>Choose Level of Difficulty</h2>
           <div className="radio-flexbox">
@@ -102,19 +132,19 @@ const Choose = () => {
               <input
                 type="radio"
                 name="difficulty"
-                checked={difficulty === "Beginner"}
-                onChange={() => setDifficulty("Beginner")}
+                value="beginner"
+                defaultChecked
               />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               Intermediate
-              <input type="radio" name="difficulty" />
+              <input type="radio" name="difficulty" value="intermediate" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               Advanced
-              <input type="radio" name="difficulty" />
+              <input type="radio" name="difficulty" value="advanced" />
               <span className="checkmark"></span>
             </label>
           </div>
@@ -126,30 +156,28 @@ const Choose = () => {
               <input
                 type="radio"
                 name="length"
-                checked={length === "15-30 mins"}
-                onChange={() => setLength("15-30 mins")}
+                value="15-30mins"
+                defaultChecked
               />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               1/2 to 1 hr
-              <input type="radio" name="length" />
+              <input type="radio" name="length" value="30mins-1hr" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               1 to 2 hrs
-              <input type="radio" name="length" />
+              <input type="radio" name="length" value="1-2hrs" />
               <span className="checkmark"></span>
             </label>
             <label className="container">
               2 to 4 hrs
-              <input type="radio" name="length" />
+              <input type="radio" name="length" value="2-4hrs" />
               <span className="checkmark"></span>
             </label>
           </div>
-          <Link to="/choose/selected">
-            <button className="choices-submit">Time to Roll!</button>
-          </Link>
+          <button className="choices-submit">Time to Roll!</button>
         </form>
       </section>
     </>

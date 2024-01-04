@@ -1,50 +1,39 @@
 import "./Cards.scss";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 
 const Cards = () => {
   const [gameData, setGameData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://www.boardgamegeek.com/xmlapi2/thing?id=123&stats=1"
-        );
-
-        const xmlData = response.data;
-
-        // Parse XML to JSON using DOMParser
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlData, "application/xml");
-        const gameDetails = Array.from(xmlDoc.querySelectorAll("item"));
-
-        if (gameDetails.length > 0) {
-          const thumbnail =
-            gameDetails[0].querySelector("thumbnail").textContent;
-          const gameTitle = gameDetails[0].querySelector("name").textContent;
-          const description =
-            gameDetails[0].querySelector("description").textContent;
-
-          setGameData([{ thumbnail, name: gameTitle, description }]);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   const [likedStates, setLikedStates] = useState([false]);
+  const params = useParams();
+  console.log("Message:", params);
 
   const handleLiked = (index) => {
     const newLikedStates = [...likedStates];
     newLikedStates[index] = !newLikedStates[index];
     setLikedStates(newLikedStates);
   };
+
+  const fetchData = async () => {
+    console.log("Fetching data...");
+    try {
+      const response = await axios.get("http://localhost:8000/api/games");
+      const gameData = response.data;
+      console.log(response);
+      console.log("Fetched Data:", gameData);
+      setGameData(gameData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  // ...
 
   return (
     <section className="cards">
@@ -68,16 +57,18 @@ const Cards = () => {
               )}
             </div>
 
-            <img
-              className="cards__img"
-              src={game.thumbnail}
-              alt={`Game ${index}`}
-            />
+            {game.thumbnail && (
+              <img
+                className="cards__img"
+                src={game.thumbnail}
+                alt={`Game ${index}`}
+              />
+            )}
             <h3 className="cards__header">{game.name}</h3>
             <p className="cards__text">{game.description}</p>
-            <a className="cards__link" href="#">
+            {/* <a className="cards__link" href="#">
               Read More
-            </a>
+            </a> */}
           </div>
         </div>
       ))}
