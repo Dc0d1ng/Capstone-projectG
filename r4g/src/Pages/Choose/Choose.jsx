@@ -6,14 +6,13 @@ import { Link, useNavigate } from "react-router-dom";
 const Choose = () => {
   const navigate = useNavigate();
   const [players, setPlayers] = useState("2");
-  const [type, setType] = useState("Family-friendly");
   const [difficulty, setDifficulty] = useState("Beginner");
   const [length, setLength] = useState("15-30 mins");
+  // const [type, setType] = useState("Family-friendly");
 
   const handleSelectionSubmit = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/selectedGames", {
-        // Update the URL with your server's address
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -26,7 +25,7 @@ const Choose = () => {
       });
 
       const data = await response.json();
-      console.log(data); // You can handle the response from the server here
+      console.log(data);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -40,7 +39,7 @@ const Choose = () => {
       event.target.length.value
     );
     navigate(
-      `/choose/selected/${event.target.players.value}&${event.target.difficulty.value}&${event.target.length.value}`
+      `/choose/selected/${event.target.players.value}/${event.target.difficulty.value}/${event.target.length.value}`
     );
   };
 

@@ -89,7 +89,7 @@ const Landing = () => {
             minLength={6}
             required
           />
-          <label className="landing__label-password">Password</label>
+          <label className="landing__label-password">Password:</label>
           <input
             id="password"
             type="password"
@@ -114,7 +114,7 @@ const Landing = () => {
         <div className="landing__divider-bottom"></div>
 
         <Link className="start-link" to="/choose">
-          Let's Begin!
+          LET'S BEGIN!
         </Link>
       </section>
     </>

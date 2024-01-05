@@ -8,6 +8,7 @@ const Cards = () => {
   const [gameData, setGameData] = useState([]);
   const [likedStates, setLikedStates] = useState([false]);
   const params = useParams();
+  // const {players, difficulty, length} = useParams();
   console.log("Message:", params);
 
   const handleLiked = (index) => {
@@ -16,24 +17,33 @@ const Cards = () => {
     setLikedStates(newLikedStates);
   };
 
-  const fetchData = async () => {
-    console.log("Fetching data...");
-    try {
-      const response = await axios.get("http://localhost:8000/api/games");
-      const gameData = response.data;
-      console.log(response);
-      console.log("Fetched Data:", gameData);
-      setGameData(gameData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  // const fetchData = async () => {
+  //   console.log("Fetching data...");
+  //   try {
+  //     const response = await axios.get("http://localhost:8000/api/games");
+  //     const gameData = response.data;
+  //     console.log(response);
+  //     console.log("Fetched Data:", gameData);
+  //     setGameData(gameData);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
 
   useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await axios.get(
+          `http://localhost:8000/api/${params.players}/${params.difficulty}/${params.length}`
+        );
+        console.log(res.data);
+        setGameData(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
     fetchData();
   }, []);
-
-  // ...
 
   return (
     <section className="cards">
@@ -72,7 +82,9 @@ const Cards = () => {
           </div>
         </div>
       ))}
-      <button className="cards__button">One More Time!</button>
+      <Link to="/choose/selected/">
+        <button className="cards__button">One More Time!</button>
+      </Link>
       <Link to="/">
         <button className="cards__button-home">Country Roooads</button>
       </Link>
