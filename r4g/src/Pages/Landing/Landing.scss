@@ -12,7 +12,9 @@
 }
 
 .landing {
-  margin: 2rem 0;
+  &__h1 {
+    margin: 1rem 0;
+  }
 
   &__form {
     display: flex;
@@ -26,6 +28,7 @@
   &__logo {
     width: 18rem;
     border-radius: 50%;
+    margin-top: 2rem;
   }
 
   &__button {
@@ -54,6 +57,7 @@
   &__label-username,
   &__label-password {
     margin-right: 10rem;
+    font-weight: bold;
   }
 
   &__or {
@@ -68,22 +72,23 @@
   }
 
   &__divider-top {
-    margin: 3rem 2rem 0 2rem;
+    margin: 3rem 3rem 0 3.25rem;
   }
 
   &__divider-bottom {
-    margin: 0 2rem 3rem 2rem;
+    margin: 0 3rem 3rem 3.25rem;
   }
 }
 
 .start-link {
   display: inline-block;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   outline: 1px solid black;
-  padding: 3.5rem 1rem;
+  padding: 4rem 1rem;
   border-radius: 50%;
-  background-color: rgb(44 176 191);
+  background-color: rgb(44, 176, 191);
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
+  margin-bottom: 2rem;
 }

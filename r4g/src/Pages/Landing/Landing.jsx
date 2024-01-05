@@ -114,7 +114,7 @@ const Landing = () => {
         <div className="landing__divider-bottom"></div>
 
         <Link className="start-link" to="/choose">
-          LET'S BEGIN!
+          Let's Begin!
         </Link>
       </section>
     </>
