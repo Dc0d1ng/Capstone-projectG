@@ -29,7 +29,6 @@ const Landing = () => {
 
     try {
       if (isLogin) {
-        // login logic here
         try {
           const response = await axios.post(
             "http://localhost:8000/user/login",
@@ -40,12 +39,11 @@ const Landing = () => {
           );
           console.log(`${username}, you're logged in!`, response.data);
           localStorage.setItem("token", response.data.token);
-          // navigate("/choose");
+          navigate("/choose");
         } catch (error) {
           console.log("Login failed...", error.response.data.message);
         }
       } else {
-        //signup logic here
         try {
           const response = await axios.post(
             "http://localhost:8000/api/signup",
@@ -55,6 +53,9 @@ const Landing = () => {
             }
           );
           console.log("You're signed up!", response.data);
+          console.log(`${username}, you're logged in!`, response.data);
+          localStorage.setItem("token", response.data.token);
+          navigate("/choose");
         } catch (error) {
           console.error("Signup failed...", error.response.data.message);
         }
@@ -70,9 +71,9 @@ const Landing = () => {
     }
   };
 
-  const toggleLoginMode = () => {
-    setisLogin(!isLogin);
-  };
+  // const toggleLoginMode = () => {
+  //   setisLogin(!isLogin);
+  // };
 
   return (
     <>
@@ -90,7 +91,7 @@ const Landing = () => {
             value={username}
             onChange={handleUsernameChange}
             placeholder="Enter Username"
-            // minLength={6}
+            minLength={4}
             required
           />
           <label className="landing__label-password">Password:</label>
@@ -100,7 +101,7 @@ const Landing = () => {
             value={password}
             onChange={handlePasswordChange}
             placeholder="Enter Password"
-            // minLength={6}
+            minLength={6}
             required
           />
           <button type="submit" className="landing__button">
