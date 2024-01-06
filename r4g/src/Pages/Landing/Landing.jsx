@@ -15,12 +15,10 @@ const Landing = () => {
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
-    setUsernameError("");
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    setPasswordError("");
   };
 
   const handleFormSubmit = async (e) => {
@@ -33,23 +31,29 @@ const Landing = () => {
       if (isLogin) {
         // login logic here
         try {
-          const response = await axios.post("/user/login", {
-            username,
-            password,
-          });
+          const response = await axios.post(
+            "http://localhost:8000/user/login",
+            {
+              username,
+              password,
+            }
+          );
           console.log(`${username}, you're logged in!`, response.data);
           localStorage.setItem("token", response.data.token);
-          navigate.push("/choose");
+          // navigate("/choose");
         } catch (error) {
           console.log("Login failed...", error.response.data.message);
         }
       } else {
         //signup logic here
         try {
-          const response = await axios.post("/user/signup", {
-            username,
-            password,
-          });
+          const response = await axios.post(
+            "http://localhost:8000/api/signup",
+            {
+              username,
+              password,
+            }
+          );
           console.log("You're signed up!", response.data);
         } catch (error) {
           console.error("Signup failed...", error.response.data.message);
@@ -86,7 +90,7 @@ const Landing = () => {
             value={username}
             onChange={handleUsernameChange}
             placeholder="Enter Username"
-            minLength={6}
+            // minLength={6}
             required
           />
           <label className="landing__label-password">Password:</label>
@@ -96,7 +100,7 @@ const Landing = () => {
             value={password}
             onChange={handlePasswordChange}
             placeholder="Enter Password"
-            minLength={6}
+            // minLength={6}
             required
           />
           <button type="submit" className="landing__button">

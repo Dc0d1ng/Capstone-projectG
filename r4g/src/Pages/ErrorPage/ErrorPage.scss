@@ -1,16 +1,14 @@
 .error {
   display: flex;
   flex-direction: column;
-  padding: 12rem 0;
+  padding: 18rem 0;
   gap: 2rem;
   align-items: center;
-  background-image: url("../../assets/11.jpg");
+  background-image: url(/src/assets/11.jpg);
   background-size: cover;
-  background-position: -140px;
-
-  // @include tablet {
-  //   background-position: center;
-  // }
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 
   &__header {
     text-align: center;
@@ -18,17 +16,17 @@
   }
 
   &__button {
-    min-width: 45%;
-    font-size: 0.875rem;
     background-color: #0095ff;
     color: #ffffff;
-    padding: 0.625rem 1.25rem;
+    padding: 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 0.8125rem;
+    font-size: 1.25rem;
     border: none;
     cursor: pointer;
-    border-radius: 0.3125rem;
+    border-radius: 1rem;
+    border-radius: 16px;
+    font-weight: 900;
   }
 }

@@ -82,8 +82,8 @@ const Cards = () => {
           </div>
         </div>
       ))}
-      <Link to="/choose/selected/">
-        <button className="cards__button">One More Time!</button>
+      <Link to="/choose">
+        <button className="cards__button">Changed your Mind?</button>
       </Link>
       <Link to="/">
         <button className="cards__button-home">Country Roooads</button>
