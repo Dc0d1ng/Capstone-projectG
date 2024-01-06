@@ -68,7 +68,8 @@ h2 {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #1349ec;
+  background-color: #047e8b;
+  outline: 2px solid;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -90,5 +91,5 @@ h2 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: white;
+  background: #de681f;
 }
