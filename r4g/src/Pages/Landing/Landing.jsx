@@ -39,7 +39,7 @@ const Landing = () => {
           );
           console.log(`${username}, you're logged in!`, response.data);
           localStorage.setItem("token", response.data.token);
-          navigate.push("/choose");
+          navigate("/choose");
         } catch (error) {
           console.log("Login failed...", error.response.data.message);
         }
@@ -101,7 +101,7 @@ const Landing = () => {
             value={password}
             onChange={handlePasswordChange}
             placeholder="Enter Password"
-            // minLength={6}
+            minLength={6}
             required
           />
           <button type="submit" className="landing__button">
