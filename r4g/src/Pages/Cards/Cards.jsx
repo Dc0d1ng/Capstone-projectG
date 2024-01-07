@@ -8,27 +8,12 @@ const Cards = () => {
   const [gameData, setGameData] = useState([]);
   const [likedStates, setLikedStates] = useState([false]);
   const params = useParams();
-  // const {players, difficulty, length} = useParams();
-  console.log("Message:", params);
 
   const handleLiked = (index) => {
     const newLikedStates = [...likedStates];
     newLikedStates[index] = !newLikedStates[index];
     setLikedStates(newLikedStates);
   };
-
-  // const fetchData = async () => {
-  //   console.log("Fetching data...");
-  //   try {
-  //     const response = await axios.get("http://localhost:8000/api/games");
-  //     const gameData = response.data;
-  //     console.log(response);
-  //     console.log("Fetched Data:", gameData);
-  //     setGameData(gameData);
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
 
   useEffect(() => {
     async function fetchData() {
@@ -76,18 +61,20 @@ const Cards = () => {
             )}
             <h3 className="cards__header">{game.name}</h3>
             <p className="cards__text">{game.description}</p>
-            {/* <a className="cards__link" href="#">
-              Read More
-            </a> */}
+            <a className="cards__link" href={game.link}>
+              BGG Link
+            </a>
           </div>
         </div>
       ))}
-      <Link to="/choose">
-        <button className="cards__button">Changed your Mind?</button>
-      </Link>
-      <Link to="/">
-        <button className="cards__button-home">Country Roooads</button>
-      </Link>
+      <div className="cards__button-flex">
+        <Link to="/choose">
+          <button className="cards__button">Changed your Mind?</button>
+        </Link>
+        <Link to="/">
+          <button className="cards__button-home">Country Roooads</button>
+        </Link>
+      </div>
     </section>
   );
 };

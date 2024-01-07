@@ -33,11 +33,6 @@ const Choose = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(
-      event.target.players.value,
-      event.target.difficulty.value,
-      event.target.length.value
-    );
     navigate(
       `/choose/selected/${event.target.players.value}/${event.target.difficulty.value}/${event.target.length.value}`
     );

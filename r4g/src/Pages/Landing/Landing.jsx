@@ -71,10 +71,6 @@ const Landing = () => {
     }
   };
 
-  // const toggleLoginMode = () => {
-  //   setisLogin(!isLogin);
-  // };
-
   return (
     <>
       <section className="landing">
@@ -117,7 +113,6 @@ const Landing = () => {
         <div className="landing__divider-top"></div>
         <p className="landing__or">OR</p>
         <div className="landing__divider-bottom"></div>
-
         <Link className="start-link" to="/choose">
           Let's Begin!
         </Link>

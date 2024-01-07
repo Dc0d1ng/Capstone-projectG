@@ -1,5 +1,5 @@
 .cards {
-  padding: 20px;
+  padding: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -8,9 +8,9 @@
   &__fav-outline,
   &__fav-filled {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 35px;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    font-size: 2.1875rem;
   }
 
   &__fav-outline {
@@ -22,19 +22,24 @@
   }
 
   &__content {
-    margin: 20px;
+    margin: 1.25rem;
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    border-radius: 7px;
-    max-width: 250px;
+    border-radius: 0.4375rem;
+    max-width: 15.625rem;
     position: relative;
     padding-bottom: 1rem;
     background-color: powderblue;
   }
 
   &__content--selected {
-    outline: 20px outset yellow;
+    outline: 1.25rem outset yellow;
+  }
+
+  &__button-flex {
+    display: flex;
+    flex-direction: column;
   }
 
   &__button,
@@ -44,7 +49,7 @@
     margin-bottom: 2rem;
     font-size: 1.25rem;
     background-color: greenyellow;
-    border-radius: 16px;
+    border-radius: 1rem;
     font-weight: 900;
   }
 
@@ -63,14 +68,14 @@
   }
 
   &__header {
-    margin: 10px 0;
+    margin: 0.625rem 0;
     font-size: 1.5rem;
   }
 
   &__link {
     text-decoration: none;
     color: #6f2ed8;
-    margin: 12px 0 7px 0;
+    margin: 0.75rem 0 0.4375rem 0;
     font-size: 1rem;
   }
 }
