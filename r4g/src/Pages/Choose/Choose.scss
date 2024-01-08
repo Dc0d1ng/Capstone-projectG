@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins.scss" as *;
+
 body {
   font-weight: bold;
 }
@@ -13,9 +15,9 @@ h2 {
 }
 
 .choices-submit {
-  padding: 1rem 2rem;
+  padding: 1rem 3.25rem;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   background-color: greenyellow;
   border-radius: 1rem;
   font-weight: 900;

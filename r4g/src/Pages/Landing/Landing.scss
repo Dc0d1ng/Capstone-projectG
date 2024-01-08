@@ -1,3 +1,5 @@
+@use "../../styles/partials/_mixins.scss" as *;
+
 * {
   text-align: center;
   list-style-type: none;
@@ -12,6 +14,8 @@
 }
 
 .landing {
+  opacity: 85%;
+
   &__h1 {
     margin: 1rem 0;
     font-size: 1.75rem;
@@ -37,6 +41,10 @@
     width: 18rem;
     border-radius: 50%;
     margin-top: 2rem;
+
+    @include tablet {
+      background-color: red;
+    }
   }
 
   &__button {
@@ -92,7 +100,7 @@
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 900;
-  outline: 1px solid black;
+  outline: 4px solid black;
   padding: 1rem 1rem;
   border-radius: 2.5rem;
   background-color: rgb(44, 176, 191);

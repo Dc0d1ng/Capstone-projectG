@@ -61,14 +61,14 @@ const Cards = () => {
             )}
             <h3 className="cards__header">{game.name}</h3>
             <p className="cards__text">{game.description}</p>
-            <a className="cards__link" href={game.link}>
+            <a className="cards__link" target="_blank" href={game.link}>
               BGG Link
             </a>
           </div>
         </div>
       ))}
       <div className="cards__button-flex">
-        <Link to="/choose">
+        <Link onClick={() => window.scroll(0, 0)} to="/choose">
           <button className="cards__button">Changed your Mind?</button>
         </Link>
         <Link to="/">
