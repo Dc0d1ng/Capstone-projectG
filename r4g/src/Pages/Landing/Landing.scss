@@ -1,0 +1,117 @@
+@use "../../styles/partials/_mixins.scss" as *;
+
+* {
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#name,
+#password {
+  padding: 0.75rem 2rem 0.5rem 1rem;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.landing {
+  opacity: 85%;
+
+  &__h1 {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+  }
+
+  &__h1,
+  &__or {
+    font-family: "Lilita One", sans-serif;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  &__input-tablet {
+    @include tablet {
+      display: flex;
+      width: 66%;
+    }
+  }
+
+  &__logo {
+    width: 18rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+
+    @include tablet {
+      background-color: red;
+    }
+  }
+
+  &__button {
+    margin-top: 1rem;
+    padding: 0.25rem 5.15rem;
+    font-size: 1.25rem;
+    background-color: rgb(47, 89, 255);
+    color: white;
+    border-radius: 1rem;
+    font-weight: 900;
+  }
+
+  &__button-login {
+    background-color: dodgerblue;
+    padding: 0.25rem 5.9rem;
+    color: white;
+    width: 100%;
+  }
+
+  &__button-toggle {
+    background-color: green;
+    padding: 0.25rem 2.5rem;
+    margin: 0;
+  }
+
+  &__label-username,
+  &__label-password {
+    margin: 1rem 1rem 0.25rem 1rem;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  &__or {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+
+  &__divider-top,
+  &__divider-bottom {
+    border: 1px solid black;
+  }
+
+  &__divider-top {
+    margin: 3rem 3rem 0 3.25rem;
+  }
+
+  &__divider-bottom {
+    margin: 0 3rem 3rem 3.25rem;
+  }
+}
+
+.start-link {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  outline: 4px solid black;
+  padding: 1rem 1rem;
+  border-radius: 2.5rem;
+  background-color: rgb(44, 176, 191);
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+}

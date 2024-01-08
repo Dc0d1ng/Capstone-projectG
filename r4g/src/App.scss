@@ -1,0 +1,17 @@
+@use "./styles/partials/mixins.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto&display=swap");
+
+*,
+*:before,
+*:after {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  background-image: url("./assets/light-beige.jpg");
+  background-size: cover;
+}

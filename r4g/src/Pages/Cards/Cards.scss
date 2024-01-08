@@ -1,0 +1,83 @@
+@use "../../styles/partials/mixins.scss" as *;
+
+.cards {
+  padding: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__fav-outline,
+  &__fav-filled {
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    font-size: 2.1875rem;
+  }
+
+  &__fav-outline {
+    color: black;
+  }
+
+  &__fav-filled {
+    color: red;
+  }
+
+  &__content {
+    margin: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 0.4375rem;
+    max-width: 15.625rem;
+    position: relative;
+    padding-bottom: 1rem;
+    background-color: powderblue;
+  }
+
+  &__content--selected {
+    outline: 1.25rem outset yellow;
+  }
+
+  &__button-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button,
+  &__button-home,
+  &__reroll-button {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    background-color: greenyellow;
+    border-radius: 1rem;
+    font-weight: 900;
+  }
+
+  &__button {
+    margin-top: 2rem;
+  }
+
+  &__button-home {
+    background-color: dodgerblue;
+    color: white;
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  &__header {
+    margin: 0.625rem 0;
+    font-size: 1.5rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #6f2ed8;
+    margin: 0.5rem 0 0.2375rem 0;
+    font-size: 1rem;
+  }
+}

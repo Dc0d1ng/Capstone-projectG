@@ -1,0 +1,32 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  padding: 18rem 0;
+  gap: 2rem;
+  align-items: center;
+  background-image: url(/src/assets/fatcat.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  &__header {
+    text-align: center;
+    color: white;
+  }
+
+  &__button {
+    background-color: #0095ff;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-radius: 1rem;
+    font-weight: 900;
+  }
+}
