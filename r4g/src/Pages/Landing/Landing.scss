@@ -37,6 +37,13 @@
     width: 100%;
   }
 
+  &__input-tablet {
+    @include tablet {
+      display: flex;
+      width: 66%;
+    }
+  }
+
   &__logo {
     width: 18rem;
     border-radius: 50%;
@@ -72,7 +79,8 @@
 
   &__label-username,
   &__label-password {
-    margin-right: 10rem;
+    margin: 1rem 1rem 0.25rem 1rem;
+    display: inline-block;
     font-weight: bold;
   }
 

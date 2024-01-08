@@ -80,26 +80,32 @@ const Landing = () => {
         <h1 className="landing__h1">Board Game Selector</h1>
 
         <form className="landing__form" onSubmit={handleFormSubmit}>
-          <label className="landing__label-username">Username:</label>
-          <input
-            id="name"
-            type="text"
-            value={username}
-            onChange={handleUsernameChange}
-            placeholder="Enter Username"
-            minLength={4}
-            required
-          />
-          <label className="landing__label-password">Password:</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={handlePasswordChange}
-            placeholder="Enter Password"
-            minLength={6}
-            required
-          />
+          <div className="landing__input-tablet">
+            <div>
+              <label className="landing__label-username">Username:</label>
+              <input
+                id="name"
+                type="text"
+                value={username}
+                onChange={handleUsernameChange}
+                placeholder="Enter Username"
+                minLength={4}
+                required
+              />
+            </div>
+            <div>
+              <label className="landing__label-password">Password:</label>
+              <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={handlePasswordChange}
+                placeholder="Enter Password"
+                minLength={6}
+                required
+              />
+            </div>
+          </div>
           <button type="submit" className="landing__button">
             {isLogin ? "Login" : "Sign Up"}
           </button>

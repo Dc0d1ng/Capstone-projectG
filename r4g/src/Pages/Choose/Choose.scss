@@ -6,6 +6,10 @@ body {
 
 h2 {
   font-size: 1.25rem;
+
+  @include tablet {
+    font-size: 2.25rem;
+  }
 }
 
 .header__logo {
@@ -24,6 +28,10 @@ h2 {
   background-image: url(/src/assets/roll.jpg);
   background-position: center;
   color: white;
+
+  @include tablet {
+    font-size: 2rem;
+  }
 }
 
 .radio-flexbox {
@@ -44,6 +52,10 @@ h2 {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+
+  @include tablet {
+    font-size: 1.75rem;
+  }
 }
 
 .container-flex {
