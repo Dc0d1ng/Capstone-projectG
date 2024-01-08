@@ -82,7 +82,7 @@ const Landing = () => {
         <form className="landing__form" onSubmit={handleFormSubmit}>
           <div className="landing__input-tablet">
             <div>
-              <label className="landing__label-username">Username:</label>
+              <label className="landing__label-username">Username</label>
               <input
                 id="name"
                 type="text"
@@ -94,7 +94,7 @@ const Landing = () => {
               />
             </div>
             <div>
-              <label className="landing__label-password">Password:</label>
+              <label className="landing__label-password">Password</label>
               <input
                 id="password"
                 type="password"
