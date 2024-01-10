@@ -64,9 +64,9 @@ const Cards = () => {
             <a className="cards__link" target="_blank" href={game.link}>
               BGG Link
             </a>
-            {/* <a className="cards__link" target="_blank" href={game.tutorial}>
+            <a className="cards__link" target="_blank" href={game.tutorial}>
               Tutorial
-            </a> */}
+            </a>
           </div>
         </div>
       ))}
