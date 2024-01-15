@@ -21,11 +21,6 @@ function App() {
           <Route path="/user/remove-fav" />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-        {
-          <audio id="audio" loop autoPlay>
-            <source src="../public/forest-sounds.mp3" type="audio/mpeg" />
-          </audio>
-        }
       </BrowserRouter>
     </>
   );

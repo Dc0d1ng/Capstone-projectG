@@ -74,7 +74,7 @@ const Cards = () => {
         <Link onClick={() => window.scroll(0, 0)} to="/choose">
           <button className="cards__button">Changed your Mind?</button>
         </Link>
-        <Link to="/">
+        <Link onClick={() => window.scroll(0, 0)} to="/">
           <button className="cards__button-home">Country Roooads</button>
         </Link>
       </div>

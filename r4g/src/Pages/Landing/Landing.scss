@@ -48,10 +48,6 @@
     width: 18rem;
     border-radius: 50%;
     margin-top: 2rem;
-
-    @include tablet {
-      background-color: red;
-    }
   }
 
   &__button {
