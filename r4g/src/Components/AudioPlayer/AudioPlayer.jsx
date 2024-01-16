@@ -1,15 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import "./AudioPlayer.scss";
 
 const AudioPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
   useEffect(() => {
-    const audio = new Audio("/path/to/song.mp3");
-    audio.play();
+    const audio = audioRef.current;
 
-    // Optional: You can stop the audio when the component unmounts
-    return () => audio.pause();
-  }, []);
+    if (isPlaying) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying]);
 
-  return <div>{/* Add any additional components or UI elements here */}</div>;
+  const togglePlay = () => {
+    setIsPlaying((prevIsPlaying) => !prevIsPlaying);
+  };
+
+  return (
+    <div>
+      <audio ref={audioRef} src="/forest-song.mp3" />
+      <button className="play-pause" onClick={togglePlay}>
+        {isPlaying ? "Pause" : "Play Forest Calms Music"}
+      </button>
+    </div>
+  );
 };
 
 export default AudioPlayer;

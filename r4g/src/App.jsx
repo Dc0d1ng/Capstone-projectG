@@ -4,6 +4,7 @@ import Landing from "./Pages/Landing/Landing";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Choose from "./Pages/Choose/Choose";
 import Cards from "./Pages/Cards/Cards";
+import AudioPlayer from "./Components/AudioPlayer/AudioPlayer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/user/remove-fav" />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        <AudioPlayer />
       </BrowserRouter>
     </>
   );
