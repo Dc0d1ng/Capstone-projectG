@@ -16,6 +16,11 @@
 .landing {
   opacity: 85%;
 
+  @include desktop {
+    max-width: 63.75rem;
+    margin: 0 auto;
+  }
+
   &__h1 {
     margin: 1rem 0;
     font-size: 1.75rem;
@@ -40,7 +45,6 @@
   &__input-tablet {
     @include tablet {
       display: flex;
-      width: 66%;
     }
   }
 

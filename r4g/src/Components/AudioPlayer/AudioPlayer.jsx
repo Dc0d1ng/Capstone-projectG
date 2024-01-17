@@ -1,5 +1,4 @@
-// src/components/AudioPlayer.js
-
+import "./AudioPlayer.scss";
 import React, { useState, useRef, useEffect } from "react";
 
 const AudioPlayer = () => {
@@ -43,7 +42,9 @@ const AudioPlayer = () => {
   return (
     <div>
       <audio ref={audioRef} src="/forest-song.mp3" autoPlay />
-      <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
+      <button className="play-pause" onClick={togglePlay}>
+        {isPlaying ? "Pause" : "Play Forest Calms Music"}
+      </button>
     </div>
   );
 };
