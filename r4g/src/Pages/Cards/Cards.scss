@@ -45,14 +45,17 @@
   }
 
   &__button,
-  &__button-home,
-  &__reroll-button {
+  &__button-home {
     padding: 1rem;
     margin-bottom: 2rem;
     font-size: 1.25rem;
     background-color: greenyellow;
     border-radius: 1rem;
     font-weight: 900;
+  }
+
+  &__button-home {
+    margin: 0;
   }
 
   &__button {

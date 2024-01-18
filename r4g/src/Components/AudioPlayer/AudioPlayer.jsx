@@ -43,7 +43,7 @@ const AudioPlayer = () => {
     <div>
       <audio ref={audioRef} src="/forest-song.mp3" autoPlay />
       <button className="play-pause" onClick={togglePlay}>
-        {isPlaying ? "Pause" : "Play Forest Calms Music"}
+        {isPlaying ? "Pause BG Music" : "Play Forest Calms Music"}
       </button>
     </div>
   );
