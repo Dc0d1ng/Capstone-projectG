@@ -1,5 +1,26 @@
 @use "../../styles/partials/mixins.scss" as *;
 
+a:link {
+  color: lightseagreen;
+  background-color: transparent;
+}
+
+a:visited {
+  color: green;
+  background-color: transparent;
+}
+
+a:hover {
+  color: blue;
+  background-color: transparent;
+}
+
+a:active {
+  color: lightcoral;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .cards {
   padding: 1.25rem;
   display: flex;
