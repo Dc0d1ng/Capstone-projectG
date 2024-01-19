@@ -1,23 +1,16 @@
 @use "../../styles/partials/mixins.scss" as *;
 
-a:link {
-  color: lightseagreen;
-  background-color: transparent;
-}
-
 a:visited {
-  color: green;
-  background-color: transparent;
+  color: white;
 }
 
 a:hover {
   color: blue;
-  background-color: transparent;
+  text-decoration: underline;
 }
 
 a:active {
   color: lightcoral;
-  background-color: transparent;
   text-decoration: underline;
 }
 
