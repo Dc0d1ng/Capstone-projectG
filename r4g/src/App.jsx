@@ -17,9 +17,9 @@ function App() {
             path="/choose/selected/:players/:difficulty/:length"
             element={<Cards />}
           />
-          <Route path="/user" />
+          {/* <Route path="/user" />
           <Route path="/user/add-fav" />
-          <Route path="/user/remove-fav" />
+          <Route path="/user/remove-fav" /> */}
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <AudioPlayer />

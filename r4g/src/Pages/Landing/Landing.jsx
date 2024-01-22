@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./landing.scss";
 import Logo from "../../assets/r4g.jpeg";
+import AudioPlayer from "../../Components/AudioPlayer/AudioPlayer";
 
 const Landing = () => {
   const [error, setError] = useState(null);
