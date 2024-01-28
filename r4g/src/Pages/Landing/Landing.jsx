@@ -38,11 +38,11 @@ const Landing = () => {
               password,
             }
           );
-          console.log(`${username}, you're logged in!`, response.data);
+          alert(`${username}, you're logged in!`, response.data);
           localStorage.setItem("token", response.data.token);
           navigate("/choose");
         } catch (error) {
-          console.log("Login failed...", error.response.data.message);
+          alert("Login failed...", error.response.data.message);
         }
       } else {
         try {
@@ -58,11 +58,11 @@ const Landing = () => {
           localStorage.setItem("token", response.data.token);
           navigate("/choose");
         } catch (error) {
-          console.error("Signup failed...", error.response.data.message);
+          alert("Signup failed...", error.response.data.message);
         }
       }
     } catch (error) {
-      console.error(
+      alert(
         "Authentication error",
         error.response?.data?.message || "There is an error"
       );
