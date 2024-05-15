@@ -68,7 +68,7 @@ If unable to, will build a database with 30 games
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
 Landing page - app logo, user signup/login, start button
 Choose page - app logo, radio selectors with players, difficulty and length
-Cards page - cards will show up based on radio buttons on previous page, will have a toggle for favourites
+Cards page - max 5 games, cards will show up based on radio buttons on previous page, will have a toggle for favourites
 
 ### Mockups
 
@@ -109,9 +109,10 @@ Signup/Login/Database
 
 ## Nice-to-haves
 
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+Your project will be marked based on what you committed to in the above document. 
+Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
 
 Recommended section of popular games
 TOP 10 hottest games
 How to play section with videos/tutorials of the games selected (linking to another page ala brainflix)
-Currenlty discounted games
+Currently discounted games
